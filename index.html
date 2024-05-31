@@ -34,14 +34,85 @@
     <div id="about">
         <div class="container">
             <div class="row">
+                <div class="about-col-1">
+                    <img src="images/Designer.jpeg">
+                </div>
                 <div class="about-col-2">
                     <h1 class="sub-title">About Us</h1><br>
-                    <p class="sub">We are the service provider and software development organization providing quality and innovative solutions to the customer's problems. Here we build the professional and quality sofware of different categories and help people to achieve what they need. This is an initiative for the upscaling of quality of software development and integration of AI in the sector of software development. </p>
-
+                    <p class="sub">As a premier service provider and software development organization, we are dedicated to delivering high-quality and innovative solutions tailored to meet our customers' unique challenges. Our mission is to design and develop professional, top-tier software across various categories, empowering individuals and businesses to achieve their goals efficiently and effectively.<br><br>
+                        
+                        We pride ourselves on our commitment to excellence, ensuring that every software product we create is robust, reliable, and user-friendly. Our team of experienced developers, engineers, and designers work collaboratively to push the boundaries of technology, continuously striving to enhance the quality of our software development processes.<br><br>
+                        
+                        Our innovative approach to software development encompasses a wide range of applications, from enterprise solutions and mobile applications to cloud-based services and AI-driven platforms. We understand that each customer has unique needs, and we are dedicated to providing customized solutions that drive success and foster growth.<br><br>
+                         </p>
                 </div>
             </div>
         </div>
     </div>
+
+<!-- about founder -->
+
+    <div id="aboutFounder">
+        <div class="container1">
+            <div class="row1">
+                <div class="about-col-3">
+                    <img src="images/founder.png">
+                    <div class="founder-text">
+                        Ishaan Katara, Founder & Developer
+                    </div>
+                </div>
+                <div class="about-col-4">
+                    <h1 class="sub-title">About Founder</h1><br>
+                    <p class="sub1"> 
+                        Hi, I'm Ishaan Katara the founder and developer of SevenIsk. I'm a B.tech CSE graduate from JIIT. I started my journey as a student who is interested in coding but now it is my passion and I want to innovate and develop the solution for the problems humans face through technology.
+                    </p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('expereince')">Expereince</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>AI\ML</span><br>Developing and Training ML models.</li>
+                            <li><span>Android Development</span><br>Developing and Designing Android Applications.</li>
+                            <li><span>Back-End Development</span><br>Creating server side back-end using Python and Node.js.</li>
+                            <li><span>DevOps</span><br>Creating and delivering quality softwares through automation.</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="expereince">
+                        <ul>
+                            <li><span>Jan 2025 - March 2025 </span><br>SDE Intern at Digital India Corporation.</li>
+                            <li><span>Oct 2024 - Dec 2024</span><br>SDE Intern at STQC (Ministry of Electronics and Information Technology).</li>
+                            <li><span>May 2024 - July 2024</span><br>SDE Intern at Sustainivo.</li>
+                            <li><span>Nov 2022 - Current</span><br>Founder of Merch Pirates a merchandise retail organization.</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2023 - 2025</span><br>B. Tech in CSE from JIIT, Noida-62</li>
+                            <li><span>2021 - 2022</span><br>B. Tech in CSE from DIT, Dehradun</li>
+                            <li><span>2020 - 2021</span><br>CBSE Class 12th from Modern Public School, Delhi.</li>
+                            <li><span>2018 - 2019</span><br>CBSE Class 10th from Modern Public School, Delhi.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<script>
+    let tablinks = document.getElementsByClassName("tab-links");
+    let tabcontents = document.getElementsByClassName("tab-contents");
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+</script>
 
 
 </body>

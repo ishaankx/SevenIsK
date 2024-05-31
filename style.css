@@ -80,15 +80,33 @@ nav ul li a:hover::after{
     color: #ababab;
 }
 
-.row{
+.row {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start; /* Align items to the start */
     flex-wrap: wrap;
+    gap: 50px; /* Optional: add a small gap if needed */
 }
 
-.about-col-2{
+.about-col-2 {
     flex-basis: 60%;
+    order: 1;
+    text-align: left;
 }
+
+.about-col-1 {
+    flex-basis: 35%;
+    order: 2;
+    text-align: right;
+}
+
+
+.about-col-1 img {
+    width: 100%; /* Adjust as needed */
+    max-width: 470px; /* Set a maximum width */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 15px;
+}
+
 
 .sub-title{
     font-size: 50px;
@@ -97,7 +115,111 @@ nav ul li a:hover::after{
 }
 
 .sub{
-    font-size: 20px;
-    font-weight: 250;
+    font-size: 18px;
+    font-weight: 150;
+    text-align: justify;
 
+}
+
+/* aboutfounder */
+
+#aboutFounder{
+    padding: 60px 70px;
+    color: #ababab;
+}
+
+.row1 {
+    display: flex;
+    justify-content: flex-start; /* Align items to the start */
+    flex-wrap: wrap;
+    gap: 5px; /* Optional: add a small gap if needed */
+}
+
+.about-col-4 {
+    flex-basis: 60%;
+    order: 1;
+    text-align: left;
+}
+
+.about-col-3 {
+    flex-basis: 35%;
+    order: 2;
+    text-align: right;
+}
+
+
+.about-col-3 img {
+    width: 100%; /* Adjust as needed */
+    max-width: 300px; /* Set a maximum width */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 15px;
+}
+
+.founder-text {
+    margin-top: 10px; /* Adjust margin as needed */
+    font-size: 18px;
+    color: #ababab; /* Adjust color as needed */
+    text-align: left; /* Align text to the left */
+    margin-left: 150px; /* Adjust margin-left as needed */
+}
+
+.sub-title{
+    font-size: 50px;
+    font-weight: 600;
+    color: #00FFF0;
+}
+
+.sub1{
+    font-size: 18px;
+    font-weight: 50;
+    text-align: justify;
+
+} 
+
+.tab-titles{
+    display: flex;
+    margin: 20px 0 40px;
+}
+
+.tab-links{
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    position: relative;
+}
+
+.tab-links::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #00FFF0;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.2s;
+}
+
+.tab-links.active-link::after{
+    width: 50%;
+}
+
+.tab-contents ul li{
+    list-style: none;
+    margin: 10px 0;
+
+}
+
+.tab-contents ul li span{
+    color: #7ffaf2;
+    font-size: 14px;
+
+}
+
+.tab-contents{
+    display: none;
+}
+
+.tab-contents.active-tab{
+    display: block;
 }
