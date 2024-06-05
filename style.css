@@ -159,8 +159,8 @@ nav ul li a:hover::after{
     margin-top: 10px; /* Adjust margin as needed */
     font-size: 17px;
     color: #ababab; /* Adjust color as needed */
-    text-align: left; /* Align text to the left */
-    margin-left: 160px; /* Adjust margin-left as needed */
+    text-align: center; /* Align text to the left */
+    display: inline-block;
 }
 
 /* .sub-title{
