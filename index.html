@@ -16,13 +16,15 @@
         <div class="container">
             <nav>
                 <img src="images/s.png" class="logo">
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Portfolio</a></li>
-                    <li><a href="#">Downloads</a></li>
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#downloads">Downloads</a></li>
+                    <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
                 </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
             </nav>
             <div class="header-text">
                 <h1>We Build The<br><span>Quality</span> Softwares</h1>
@@ -54,8 +56,8 @@
 <!-- about founder -->
 
     <div id="aboutFounder">
-        <div class="container1">
-            <div class="row1">
+        <div class="container">
+            <div class="row">
                 <div class="about-col-3">
                     <img src="images/founder.png"><br>
                     <div class="founder-text">
@@ -64,7 +66,7 @@
                 </div>
                 <div class="about-col-4">
                     <h1 class="sub-title">About Founder</h1><br>
-                    <p class="sub1"> 
+                    <p class="sub"> 
                         Hi, I'm Ishaan Katara the founder and developer of SevenIsk. I'm a B.tech CSE graduate from JIIT. I started my journey as a student who is interested in coding but now it is my passion and I want to innovate and develop the solution for the problems humans face through technology.
                     </p>
                     <div class="tab-titles">
@@ -182,13 +184,13 @@
                 </div>
             </div>
             <div class="contact-right">
-                <form>
+                <form name="submit-to-google-sheet">
                     <input type="text" name="Name" placeholder="Your Name" required>
-                    <input type="email" name="email" placeholder="Your Email" required>
+                    <input type="email" name="E-Mail" placeholder="Your Email" required>
                     <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
                     <button type="submit" class="btn btn2">Submit</button>
-
                 </form>
+                <span id="msg"></span>
             </div>
         </div>
     </div>
@@ -212,6 +214,40 @@
         document.getElementById(tabname).classList.add("active-tab");
     }
 </script>
+
+<script>
+    let sidemenu = document.getElementById("sidemenu");
+
+    function openmenu(){
+        sidemenu.style.right = "0";
+    }
+    function closemenu(){
+        sidemenu.style.right = "-200px";
+    }
+
+</script>
+
+  
+  <script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbyq2hwIkk0nlvb0AWI42xItq974cNervprjVt0SZMgXHPKsgRmFqiim_e6FVZkq7xExkQ/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg")
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML = "Message sent successfully"
+            setTimeout(function(){
+                msg.innerHTML = ""
+            },5000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+
+
 
 
 
