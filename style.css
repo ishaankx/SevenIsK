@@ -93,17 +93,19 @@ nav ul li a:hover::after{
     gap: 50px; /* Optional: add a small gap if needed */
 }
 
+.about-col-1 {
+    flex-basis: 35%;
+    order: 2;
+    text-align: right;
+}
+
 .about-col-2 {
     flex-basis: 60%;
     order: 1;
     text-align: left;
 }
 
-.about-col-1 {
-    flex-basis: 35%;
-    order: 2;
-    text-align: right;
-}
+
 
 
 .about-col-1 img {
@@ -152,7 +154,7 @@ nav ul li a:hover::after{
 .about-col-3 {
     flex-basis: 35%;
     order: 2;
-    text-align: center;
+    text-align: right;
 }
 
 
